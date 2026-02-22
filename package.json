@@ -6,9 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "firebase:login": "firebase login",
+    "firebase:target": "firebase target:apply hosting site essicommercial",
+    "build:clean": "rm -rf public/_next public/index.html public/404.html",
+    "build:copy": "node scripts/copy-build.js",
+    "firebase:deploy": "npm run build:clean && npm run build && npm run build:copy && firebase deploy --only functions,hosting:site --project organic-spirit-488116-e2",
+    "deploy": "npm run firebase:deploy"
   },
   "dependencies": {
+    "@google-cloud/storage": "^7.19.0",
+    "lucide-react": "^0.575.0",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"

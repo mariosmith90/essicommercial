@@ -1,0 +1,10 @@
+# Copy this file to terraform.tfvars and fill in your values:
+#   cp terraform.tfvars.example terraform.tfvars
+
+# Shared GCP project (same org as brighthornmedia — project creation is org-restricted)
+project_id   = "organic-spirit-488116-e2"
+region       = "us-east1"
+environment  = "production"
+
+firebase_site_id              = "essicommercial"    # must be globally unique on Firebase
+firebase_web_app_display_name = "EssiCommercial Web"

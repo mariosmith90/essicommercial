@@ -1,26 +1,125 @@
 @import "tailwindcss";
 
+/* ─── Brand tokens ─────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-cormorant-loaded: var(--font-cormorant), 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-dm-sans-loaded:   var(--font-dm-sans),   'DM Sans', system-ui, -apple-system, sans-serif;
+
+  /* Backgrounds — darkened earthy clay scale */
+  --color-essi-tan:          #c4a072;   /* hero */
+  --color-essi-tan-mid:      #ccaa80;   /* services, contact */
+  --color-essi-tan-light:    #dcc3a0;   /* about, projects, testimonials */
+
+  /* Terracotta accent */
+  --color-essi-terra:        #a85c38;   /* primary */
+  --color-essi-terra-hover:  #8a4828;   /* hover / pressed */
+  --color-essi-terra-dark:   #6e3318;   /* ultra-deep */
+
+  /* Brown text scale */
+  --color-essi-brown:        #1a0e06;   /* near-black headings */
+  --color-essi-brown-mid:    #3a2818;   /* body */
+  --color-essi-brown-light:  #6a5040;   /* muted / captions */
+
+  /* Greens */
+  --color-essi-sage:         #4a6844;   /* sage accent */
+  --color-essi-forest:       #12201a;   /* process section */
+  --color-essi-forest-deep:  #080e0b;   /* footer */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ─── Base styles ───────────────────────────────────────────── */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans-loaded);
+  font-size: 16px;
+  background-color: var(--color-essi-tan-light);
+  color: var(--color-essi-brown);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 1.65;
 }
+
+/* Force Cormorant on ALL headings — guaranteed regardless of utility classes */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant-loaded);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+p, li {
+  text-wrap: pretty;
+}
+
+/* ─── Selection tint ────────────────────────────────────────── */
+::selection {
+  background-color: var(--color-essi-terra);
+  color: #fff;
+}
+
+/* ─── Font utilities ────────────────────────────────────────── */
+.font-display {
+  font-family: var(--font-cormorant-loaded);
+}
+
+.font-sans-custom {
+  font-family: var(--font-dm-sans-loaded);
+}
+
+/* ─── Animations ─────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* ─── Image zoom ─────────────────────────────────────────────── */
+.img-zoom img {
+  transition: transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.img-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* ─── Skip to content ────────────────────────────────────────── */
+.skip-nav {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-nav:focus {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-essi-terra);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  z-index: 999;
+}
+
+/* ─── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track  { background: var(--color-essi-tan-light); }
+::-webkit-scrollbar-thumb  { background: var(--color-essi-brown-light); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-essi-terra); }
+
+
+
+/* ─── Focus / accessibility ──────────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid var(--color-essi-terra);
+  outline-offset: 3px;
+}
+
