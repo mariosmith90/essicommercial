@@ -6,28 +6,28 @@ const services = [
     title: "Commercial Interiors",
     who: "Offices, corporate HQ, retail & hospitality",
     description:
-      "Daniela has led space planning and design development for multi-site corporate offices up to 25,000 sq. ft. &mdash; applying activity-based zoning, adjacency mapping, and environmental branding to build spaces that reinforce how organizations actually work.",
+      "We design offices and commercial environments around how organizations actually operate &mdash; how teams move, collaborate, and need to focus. Space planning, adjacency mapping, and environmental branding are tools we use to make sure the layout earns its square footage.",
   },
   {
     icon: <Home className="w-6 h-6" />,
     title: "Residential Design",
     who: "Primary homes, townhouses & multi-unit",
     description:
-      "Rooted in material intelligence and a genuine interest in how people live, residential projects receive the same documentation rigor as commercial work &mdash; full FF&amp;E coordination, finish specifications, and site review through installation.",
+      "Residential work gets the same rigor as commercial. Full FF&amp;E coordination, material specifications, and site presence through installation. We&apos;re interested in how you actually live &mdash; not just how the space photographs.",
   },
   {
     icon: <Palette className="w-6 h-6" />,
     title: "Wellness & Community Spaces",
     who: "Clinics, studios, cultural & civic organizations",
     description:
-      "Sensory load, acoustic threshold, material safety, and ergonomic planning are not afterthoughts &mdash; they are primary design constraints. Daniela has delivered medical wellness clinics and community-facing spaces built around the people who use them daily.",
+      "In wellness and community settings, the stakes of getting acoustics, lighting, and material selection wrong are higher. We treat sensory comfort and ergonomic planning as primary constraints from the first sketch &mdash; not adjustments made at the end.",
   },
   {
     icon: <Box className="w-6 h-6" />,
     title: "FF&E & Construction Documents",
     who: "Specs, sourcing, Revit & ArchiCAD production",
     description:
-      "Complete FF&amp;E packages, procurement coordination, and construction document production in Revit and ArchiCAD. Standardized workflows that reduce permit review timelines, cut field change orders, and keep installations on schedule.",
+      "Complete FF&amp;E packages, procurement coordination, and full construction document production in Revit and ArchiCAD. We take the documentation side seriously because that&apos;s where most projects quietly lose time and budget.",
   },
 ];
 
@@ -48,9 +48,10 @@ export default function Services() {
           <span className="not-italic font-semibold"> The process isn&apos;t.</span>
         </h2>
         <p className="text-[18px] leading-[2] font-light mb-16 max-w-xl" style={{ color: '#3D2510' }}>
-          From 25,000 sq. ft. corporate headquarters to a single-room wellness clinic,
-          Daniela brings the same disciplined approach: understand the program deeply,
-          document it precisely, and deliver a space that functions as well as it looks.
+          Whether it&apos;s a multi-floor corporate office or a single-suite clinic,
+          we bring the same discipline: understand the program, get the documentation
+          right, and stay involved long enough to make sure what gets built reflects
+          what was designed.
         </p>
 
         <div className="grid md:grid-cols-2 gap-px" style={{ backgroundColor: 'rgba(212,98,42,0.2)' }}>

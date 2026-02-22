@@ -4,20 +4,20 @@ const truths = [
   {
     icon: <Leaf className="w-5 h-5" />,
     color: "#C8A84A",
-    title: "Sensation before specification",
-    body: "Daniela starts every project by asking how the space needs to feel &mdash; acoustically, atmospherically, and ergonomically. The construction documents follow that intent. Never the other way around.",
+    title: "Feel first, specify second",
+    body: "Before a single line is drawn, we need to understand how the space should feel &mdash; acoustically, ergonomically, atmospherically. That answer shapes everything that follows.",
   },
   {
     icon: <Sun className="w-5 h-5" />,
     color: "#FAF7F2",
-    title: "Documentation that holds",
-    body: "Precise Revit and ArchiCAD packages mean fewer field change orders, fewer RFIs, and faster permit approvals. Good drawings are the most underrated client service in this industry.",
+    title: "Drawings that build without confusion",
+    body: "Sloppy documentation costs clients time and money in the field. We take construction documents seriously &mdash; thorough, coordinated packages that trades can actually build from.",
   },
   {
     icon: <Layers className="w-5 h-5" />,
     color: "#C8A84A",
     title: "Your identity is the brief",
-    body: "Your brand, your community, your operational reality &mdash; these are design materials with the same weight as the millwork. We treat them accordingly.",
+    body: "Your brand, your people, your way of working &mdash; these aren&apos;t context for the design. They are the design. We build spaces that make sense for the specific organization inside them.",
   },
 ];
 
@@ -31,21 +31,21 @@ export default function About() {
           Why We Exist
         </p>
         <h2 className="font-display font-light italic leading-[1.05] mb-8" style={{ fontSize: 'clamp(36px, 5vw, 64px)', color: '#FAF7F2' }}>
-          Ten years of details.
+          Built on a decade
           <br />
-          <span className="not-italic font-semibold">Zero tolerance for vague drawings.</span>
+          <span className="not-italic font-semibold">of doing the actual work.</span>
         </h2>
         <p className="text-[18px] leading-[2] font-light mb-6 max-w-2xl" style={{ color: 'rgba(250,247,242,0.72)' }}>
-          Daniela Smith founded EssiCommercial after a decade leading design at firms
-          across New York &mdash; managing construction documents, directing space planning
-          for multi-site corporate portfolios, and delivering luxury interiors from
-          schematic concept through final installation.
+          EssiCommercial grew out of years spent inside large commercial projects &mdash;
+          coordinating trades, producing construction documents, managing FF&amp;E from
+          spec to installation, and learning firsthand where most design engagements
+          fall apart.
         </p>
         <p className="text-[18px] leading-[2] font-light mb-16 max-w-2xl" style={{ color: 'rgba(250,247,242,0.72)' }}>
-          She built this studio around a simple conviction: that the quality of the
-          documentation is the quality of the project. Precise Revit packages, rigorous
-          FF&amp;E coordination, and a genuine curiosity about each client&apos;s identity
-          are not extras &mdash; they are the work.
+          We started this studio because we wanted to work at a scale where the design
+          intent actually survives the build. Smaller project load, deeper involvement,
+          and documentation rigorous enough that nothing gets lost between the drawing
+          and the wall.
         </p>
 
         {/* Three truths */}

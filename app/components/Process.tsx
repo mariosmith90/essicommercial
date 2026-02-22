@@ -3,25 +3,25 @@ const steps = [
     num: "01",
     title: "Discovery — we listen before we draw",
     body:
-      "The first conversation covers your program, your operational needs, and what hasn't worked in your current space. We're building the brief that will drive every decision downstream — spatial, material, and budgetary.",
+      "We start by understanding your program, how your team or clients use the space day-to-day, and where your current environment is working against you. That context shapes every decision that follows.",
   },
   {
     num: "02",
-    title: "Concept — everything on paper before a dollar moves",
+    title: "Concept — aligned before anything is purchased",
     body:
-      "You receive a full concept package: spatial layout, material palette, moodboard, and a line-by-line cost estimate before any purchasing begins. Stakeholder walkthroughs are part of this phase — approvals happen here, not during construction.",
+      "You get a complete concept package — layouts, material palette, FF&E direction, and a cost estimate — before any procurement begins. Stakeholder sign-off happens here, not mid-construction.",
   },
   {
     num: "03",
-    title: "Development — documents that build without confusion",
+    title: "Development — built to be built",
     body:
-      "Revit and ArchiCAD construction documents, 3D walkthroughs, FF&E specifications, and finish schedules. Daniela's documentation standard has reduced field change orders by 40% and cut permit review timelines across multi-site projects.",
+      "Full construction documents in Revit or ArchiCAD, finish schedules, and coordinated specifications. We produce drawings that trades can follow without calling us for clarification on every detail.",
   },
   {
     num: "04",
-    title: "Delivery — on site until it's right",
+    title: "Delivery — present through the finish",
     body:
-      "We coordinate procurement lead times, sequence installations, and conduct site reviews through completion. The project closes when the space performs as designed — not when the last box leaves the floor.",
+      "We track procurement, review installations on site, and stay involved until the space is complete. The handoff happens when everything is right — not when the calendar runs out.",
   },
 ];
 
@@ -38,9 +38,10 @@ export default function Process() {
           <span className="not-italic font-semibold"> Bad process isn&apos;t.</span>
         </h2>
         <p className="text-[18px] leading-[2] font-light mb-16 max-w-xl" style={{ color: 'rgba(250,247,242,0.65)' }}>
-          After a decade managing construction documents, coordinating trades, and
-          tracking FF&amp;E across complex projects, Daniela built a process designed
-          around one goal: no surprises. For you or for the build team.
+          We&apos;ve seen what happens when approvals slip into construction phase,
+          when FF&amp;E lead times aren&apos;t tracked early, or when drawings leave
+          too much open to interpretation. Our process is structured specifically to
+          close those gaps.
         </p>
 
         <div className="grid md:grid-cols-2 gap-10 lg:gap-14">
