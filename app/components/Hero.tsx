@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
+import { useGCSImage } from "@/app/lib/useGCSImage";
 
 interface HeroProps {
   onOpenContact?: () => void;
@@ -9,6 +10,7 @@ interface HeroProps {
 
 export default function Hero({ onOpenContact }: HeroProps) {
   const contentRef = useRef<HTMLDivElement>(null);
+  const bgUrl = useGCSImage("hero/hero-bg.jpg");
 
   useEffect(() => {
     const el = contentRef.current;
@@ -28,33 +30,40 @@ export default function Hero({ onOpenContact }: HeroProps) {
     <section
       className="relative overflow-hidden"
       style={{
-        backgroundColor: "#FAF7F2",
         minHeight: "100dvh",
         display: "flex",
         flexDirection: "column",
+        backgroundColor: "#1a1008",
       }}
     >
-      {/* Top accent bar */}
-      <div className="absolute top-0 inset-x-0 h-[3px]" style={{ backgroundColor: "#D4622A" }} />
+      {/* Background image */}
+      {bgUrl && (
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            inset: 0,
+            backgroundImage: `url(${bgUrl})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center 30%",
+            opacity: 0.72,
+          }}
+        />
+      )}
 
-      {/* Ghost watermark */}
+      {/* Gradient overlay — heavier at bottom so text pops */}
       <div
         aria-hidden="true"
-        className="font-display select-none pointer-events-none"
         style={{
           position: "absolute",
-          right: "-0.04em",
-          bottom: "-0.12em",
-          fontSize: "clamp(260px, 36vw, 540px)",
-          fontStyle: "italic",
-          fontWeight: 700,
-          color: "rgba(212,98,42,0.08)",
-          lineHeight: 1,
-          letterSpacing: "-0.05em",
+          inset: 0,
+          background:
+            "linear-gradient(to top, rgba(10,6,2,0.88) 0%, rgba(10,6,2,0.45) 50%, rgba(10,6,2,0.15) 100%)",
         }}
-      >
-        EC
-      </div>
+      />
+
+      {/* Top accent bar */}
+      <div className="absolute top-0 inset-x-0 h-[3px]" style={{ backgroundColor: "#D4622A" }} />
 
       {/* Main layout */}
       <div
@@ -74,31 +83,31 @@ export default function Hero({ onOpenContact }: HeroProps) {
         {/* ── META ROW ── */}
         <div
           className="flex flex-wrap items-baseline justify-between gap-y-1"
-          style={{ paddingBottom: "1.25rem", borderBottom: "1px solid rgba(212,98,42,0.22)" }}
+          style={{ paddingBottom: "1.25rem", borderBottom: "1px solid rgba(255,255,255,0.18)" }}
         >
           <p
             className="font-sans font-medium uppercase"
-            style={{ fontSize: "10px", letterSpacing: "0.38em", color: "#9A6030" }}
+            style={{ fontSize: "10px", letterSpacing: "0.38em", color: "rgba(255,255,255,0.6)" }}
           >
             Interior Design &amp; Build
           </p>
           <p
             className="font-sans font-medium uppercase"
-            style={{ fontSize: "10px", letterSpacing: "0.38em", color: "#9A6030" }}
+            style={{ fontSize: "10px", letterSpacing: "0.38em", color: "rgba(255,255,255,0.6)" }}
           >
             The Northeast &nbsp;·&nbsp; Est. 2012
           </p>
         </div>
 
-        {/* ── HEADLINE ── */}
-        <div className="flex-1 flex items-center py-10 lg:py-0">
+        {/* ── BOTTOM BLOCK: headline + CTAs pinned to bottom ── */}
+        <div className="flex flex-col gap-8 mt-auto pt-10">
           <h1
             className="font-display font-light"
             style={{
-              fontSize: "clamp(56px, 10vw, 140px)",
+              fontSize: "clamp(52px, 10vw, 140px)",
               lineHeight: 1.0,
               letterSpacing: "-0.03em",
-              color: "#160C04",
+              color: "#FAF7F2",
             }}
           >
             <span style={{ display: "block", fontStyle: "italic" }}>This region</span>
@@ -107,65 +116,66 @@ export default function Hero({ onOpenContact }: HeroProps) {
               className="font-sans font-semibold not-italic"
               style={{
                 display: "block",
-                color: "#D4622A",
-                marginTop: "1.2em",
-                fontSize: "clamp(14px, 2.8vw, 28px)",
+                color: "#E8854A",
+                marginTop: "1em",
+                fontSize: "clamp(14px, 2.5vw, 26px)",
                 letterSpacing: "-0.01em",
-                lineHeight: 1.4,
-                maxWidth: "32ch",
+                lineHeight: 1.5,
+                maxWidth: "34ch",
               }}
             >
               We make sure it reflects the people who live here.
             </span>
           </h1>
-        </div>
 
-        {/* ── BOTTOM ROW ── */}
-        <div style={{ borderTop: "1px solid rgba(90,58,32,0.18)", paddingTop: "2rem" }}>
-          <div className="flex flex-row items-center gap-5 flex-wrap">
-            <button
-              onClick={() => onOpenContact?.()}
-              className="inline-flex items-center gap-3 text-white font-sans font-medium rounded-full group"
-              style={{
-                fontSize: "11px",
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
-                padding: "14px 30px",
-                backgroundColor: "#D4622A",
-                border: "none",
-                cursor: "pointer",
-                transition: "background-color 0.25s ease",
-                whiteSpace: "nowrap",
-                alignSelf: "flex-start",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#B84A18")}
-              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#D4622A")}
-            >
-              Start a Project
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-300" aria-hidden="true" />
-            </button>
+          <div
+            style={{ borderTop: "1px solid rgba(255,255,255,0.18)", paddingTop: "1.75rem" }}
+          >
+            <div className="flex flex-row items-center gap-5 flex-wrap">
+              <button
+                onClick={() => onOpenContact?.()}
+                className="inline-flex items-center gap-3 text-white font-sans font-medium rounded-full group"
+                style={{
+                  fontSize: "11px",
+                  letterSpacing: "0.22em",
+                  textTransform: "uppercase",
+                  padding: "14px 30px",
+                  backgroundColor: "#D4622A",
+                  border: "none",
+                  cursor: "pointer",
+                  transition: "background-color 0.25s ease",
+                  whiteSpace: "nowrap",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#B84A18")}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#D4622A")}
+              >
+                Start a Project
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-300" aria-hidden="true" />
+              </button>
 
-            <a
-              href="#projects"
-              onClick={scrollTo("#projects")}
-              className="font-sans font-medium"
-              style={{
-                fontSize: "11px",
-                letterSpacing: "0.22em",
-                textTransform: "uppercase",
-                color: "#6A3A14",
-                textDecoration: "underline",
-                textUnderlineOffset: "4px",
-                transition: "color 0.2s ease",
-                whiteSpace: "nowrap",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#D4622A")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#6A3A14")}
-            >
-              See Our Work
-            </a>
+              <a
+                href="#projects"
+                onClick={scrollTo("#projects")}
+                className="font-sans font-medium"
+                style={{
+                  fontSize: "11px",
+                  letterSpacing: "0.22em",
+                  textTransform: "uppercase",
+                  color: "rgba(255,255,255,0.75)",
+                  textDecoration: "underline",
+                  textUnderlineOffset: "4px",
+                  transition: "color 0.2s ease",
+                  whiteSpace: "nowrap",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#E8854A")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255,255,255,0.75)")}
+              >
+                See Our Work
+              </a>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   );
