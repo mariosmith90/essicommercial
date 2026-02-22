@@ -41,7 +41,7 @@ export default function Nav({ onInquire }: NavProps) {
           boxShadow: scrolled ? '0 1px 0 0 rgba(22,12,4,0.1)' : 'none',
         }}
       >
-        <div className="mx-auto max-w-7xl px-6 lg:px-12 flex items-center justify-between h-[72px]">
+        <div className="mx-auto max-w-7xl px-6 lg:px-12 flex items-center justify-between h-[88px]">
 
           {/* Logo */}
           <a
@@ -49,10 +49,10 @@ export default function Nav({ onInquire }: NavProps) {
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             className="flex flex-col leading-none group"
           >
-            <span className="font-display text-[24px] font-semibold tracking-[0.2em] text-[#160C04] group-hover:text-[#D4622A] transition-colors duration-300 leading-none">
+            <span className="font-display text-[48px] font-semibold tracking-[0.2em] text-[#160C04] group-hover:text-[#D4622A] transition-colors duration-300 leading-none">
               ESSI
             </span>
-            <span className="text-[8px] font-sans tracking-[0.45em] uppercase text-[#9A6030] mt-0.5">
+            <span className="text-[11px] font-sans tracking-[0.45em] uppercase text-[#9A6030] mt-1">
               Commercial
             </span>
           </a>
