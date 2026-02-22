@@ -73,12 +73,12 @@ export default function Footer() {
             <div>
               <p className="text-[10px] tracking-[0.35em] uppercase mb-5" style={{ color: 'rgba(255,255,255,0.25)' }}>Studio</p>
               <div className="space-y-2.5 text-[13px]">
-                <p>New York, NY</p>
-                <a href="mailto:hello@essicommercial.com" className="block hover:text-white transition-colors">
-                  hello@essicommercial.com
+                <p>New York Metro Area</p>
+                <a href="mailto:daniela@essicommercial.com" className="block hover:text-white transition-colors">
+                  daniela@essicommercial.com
                 </a>
-                <a href="tel:+12125550123" className="block hover:text-white transition-colors">
-                  (212) 555-0123
+                <a href="tel:+15167897897" className="block hover:text-white transition-colors">
+                  (516) 789-7897
                 </a>
                 <p className="text-[11px] pt-2" style={{ color: 'rgba(255,255,255,0.25)' }}>Mon–Fri · 9am–6pm EST</p>
               </div>

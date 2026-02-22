@@ -18,9 +18,9 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "EssiCommercial — Interior Design & Architecture",
   description:
-    "EssiCommercial is a New York-based interior design and build firm crafting wellness-centered, culturally grounded spaces for residential and commercial clients across the Northeast.",
+    "EssiCommercial is a full-service interior design studio led by Daniela Smith — a licensed designer with 10+ years delivering commercial, residential, and wellness spaces across the Northeast.",
   keywords:
-    "interior design, architecture, commercial interiors, wellness design, sustainable design, New York, Northeast, biophilic design",
+    "interior design, architecture, commercial interiors, Revit, ArchiCAD, AutoCAD, FF&E, wellness design, New York, Northeast, Daniela Smith",
 };
 
 export default function RootLayout({

@@ -5,19 +5,19 @@ const truths = [
     icon: <Leaf className="w-5 h-5" />,
     color: "#C8A84A",
     title: "Sensation before specification",
-    body: "We start with how you want the space to feel &mdash; acoustically, atmospherically, emotionally. The specs follow from that. Not the other way around.",
+    body: "Daniela starts every project by asking how the space needs to feel &mdash; acoustically, atmospherically, and ergonomically. The construction documents follow that intent. Never the other way around.",
   },
   {
     icon: <Sun className="w-5 h-5" />,
     color: "#FAF7F2",
-    title: "Radical cost transparency",
-    body: "Budget anxiety kills more projects than bad design does. We put every cost on the table from day one &mdash; material, labor, contingency &mdash; so nothing blindsides you.",
+    title: "Documentation that holds",
+    body: "Precise Revit and ArchiCAD packages mean fewer field change orders, fewer RFIs, and faster permit approvals. Good drawings are the most underrated client service in this industry.",
   },
   {
     icon: <Layers className="w-5 h-5" />,
     color: "#C8A84A",
-    title: "Identity as the brief",
-    body: "Your heritage, your neighborhood&apos;s history, your community&apos;s future &mdash; these are design materials. We treat them with the same care as the joinery.",
+    title: "Your identity is the brief",
+    body: "Your brand, your community, your operational reality &mdash; these are design materials with the same weight as the millwork. We treat them accordingly.",
   },
 ];
 
@@ -31,19 +31,21 @@ export default function About() {
           Why We Exist
         </p>
         <h2 className="font-display font-light italic leading-[1.05] mb-8" style={{ fontSize: 'clamp(36px, 5vw, 64px)', color: '#FAF7F2' }}>
-          A lot of design firms work
+          Ten years of details.
           <br />
-          <span className="not-italic font-semibold">in the Northeast. Very few listen to it.</span>
+          <span className="not-italic font-semibold">Zero tolerance for vague drawings.</span>
         </h2>
         <p className="text-[18px] leading-[2] font-light mb-6 max-w-2xl" style={{ color: 'rgba(250,247,242,0.72)' }}>
-          We&apos;ve watched neighborhoods change, buildings get flipped, and communities
-          lose the visual language that made them theirs. Gentrification doesn&apos;t
-          just displace people &mdash; it erases the aesthetic memory of a place.
+          Daniela Smith founded EssiCommercial after a decade leading design at firms
+          across New York &mdash; managing construction documents, directing space planning
+          for multi-site corporate portfolios, and delivering luxury interiors from
+          schematic concept through final installation.
         </p>
         <p className="text-[18px] leading-[2] font-light mb-16 max-w-2xl" style={{ color: 'rgba(250,247,242,0.72)' }}>
-          EssiCommercial was built as a counter to that. We practice design as an act
-          of cultural stewardship &mdash; taking each project&apos;s specific history, community,
-          and client seriously enough to make something that couldn&apos;t exist anywhere else.
+          She built this studio around a simple conviction: that the quality of the
+          documentation is the quality of the project. Precise Revit packages, rigorous
+          FF&amp;E coordination, and a genuine curiosity about each client&apos;s identity
+          are not extras &mdash; they are the work.
         </p>
 
         {/* Three truths */}

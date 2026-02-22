@@ -27,10 +27,10 @@ export default function Contact({ onOpenContact }: ContactProps) {
                 className="font-display font-light leading-[1.08] italic"
                 style={{ fontSize: "clamp(34px, 5vw, 64px)", color: "#FAF7F2" }}
               >
-                Tell us about your space
+                Tell us about your project.
                 <br />
                 <span className="not-italic font-semibold">
-                  and who it needs to serve.
+                  Daniela will respond personally.
                 </span>
               </h2>
             </div>
@@ -41,8 +41,7 @@ export default function Contact({ onOpenContact }: ContactProps) {
                 className="text-[15px] leading-[1.8] max-w-xs lg:text-right"
                 style={{ color: "rgba(250,247,242,0.82)" }}
               >
-                We take on a small number of projects at a time — by design.
-                The first conversation is just that.
+                EssiCommercial takes a focused project load by design. The first conversation is a direct one &mdash; no hand-offs, no intake forms.
               </p>
               <button
                 className="inline-flex items-center gap-4 text-white text-[11px] tracking-widest uppercase px-10 py-4 rounded-full transition-colors duration-300"

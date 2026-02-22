@@ -4,30 +4,30 @@ const services = [
   {
     icon: <Building2 className="w-6 h-6" />,
     title: "Commercial Interiors",
-    who: "Offices, restaurants, retail & hospitality",
+    who: "Offices, corporate HQ, retail & hospitality",
     description:
-      "The Northeast&apos;s commercial fabric is dense with character &mdash; post-industrial lofts, adaptive reuse buildings, neighborhood anchor spots. We work with that grain, not against it. Spaces that communicate something true about who runs them.",
+      "Daniela has led space planning and design development for multi-site corporate offices up to 25,000 sq. ft. &mdash; applying activity-based zoning, adjacency mapping, and environmental branding to build spaces that reinforce how organizations actually work.",
   },
   {
     icon: <Home className="w-6 h-6" />,
     title: "Residential Design",
     who: "Primary homes, townhouses & multi-unit",
     description:
-      "Whether it&apos;s a Victorian triple-decker in Somerville or a pre-war apartment in Crown Heights, we design around the full texture of your life &mdash; your heirlooms and habits, your need for stillness and for gathering &mdash; not a curated version of it.",
+      "Rooted in material intelligence and a genuine interest in how people live, residential projects receive the same documentation rigor as commercial work &mdash; full FF&amp;E coordination, finish specifications, and site review through installation.",
   },
   {
     icon: <Palette className="w-6 h-6" />,
     title: "Wellness & Community Spaces",
     who: "Clinics, studios, cultural & civic organizations",
     description:
-      "In a region where community institutions are under constant development pressure, the spaces where people heal and gather carry enormous weight. We design with sensory load, material safety, acoustic threshold, and community dignity as primary constraints.",
+      "Sensory load, acoustic threshold, material safety, and ergonomic planning are not afterthoughts &mdash; they are primary design constraints. Daniela has delivered medical wellness clinics and community-facing spaces built around the people who use them daily.",
   },
   {
     icon: <Box className="w-6 h-6" />,
-    title: "FF&E & Finishing",
-    who: "Materials, sourcing & installation",
+    title: "FF&E & Construction Documents",
+    who: "Specs, sourcing, Revit & ArchiCAD production",
     description:
-      "We source from Northeast craftspeople and mission-aligned makers wherever possible. Every fixture and finish is specified with transparency, durability, and the cultural intelligence of your project &mdash; not just the current issue of a trade publication.",
+      "Complete FF&amp;E packages, procurement coordination, and construction document production in Revit and ArchiCAD. Standardized workflows that reduce permit review timelines, cut field change orders, and keep installations on schedule.",
   },
 ];
 
@@ -45,12 +45,12 @@ export default function Services() {
         </p>
         <h2 className="font-display font-light italic leading-[1.05] mb-6" style={{ fontSize: 'clamp(36px, 5vw, 64px)', color: '#160C04' }}>
           Every project is different.
-          <span className="not-italic font-semibold"> So is our approach to it.</span>
+          <span className="not-italic font-semibold"> The process isn&apos;t.</span>
         </h2>
         <p className="text-[18px] leading-[2] font-light mb-16 max-w-xl" style={{ color: '#3D2510' }}>
-          A repurposed textile mill in Lowell requires entirely different thinking than
-          a Harlem brownstone or a Boston wellness clinic. We don&apos;t bring
-          a formula &mdash; we bring experience with all of it.
+          From 25,000 sq. ft. corporate headquarters to a single-room wellness clinic,
+          Daniela brings the same disciplined approach: understand the program deeply,
+          document it precisely, and deliver a space that functions as well as it looks.
         </p>
 
         <div className="grid md:grid-cols-2 gap-px" style={{ backgroundColor: 'rgba(212,98,42,0.2)' }}>

@@ -1,27 +1,27 @@
 const steps = [
   {
     num: "01",
-    title: "We learn before we lead",
+    title: "Discovery — we listen before we draw",
     body:
-      "The first conversation is about your space, your history, and what hasn\u2019t worked before. We\u2019re listening for the things that won\u2019t show up on a floor plan \u2014 the cultural textures, the daily rituals, the things that genuinely matter.",
+      "The first conversation covers your program, your operational needs, and what hasn't worked in your current space. We're building the brief that will drive every decision downstream — spatial, material, and budgetary.",
   },
   {
     num: "02",
-    title: "We put everything on paper before we spend a dollar",
+    title: "Concept — everything on paper before a dollar moves",
     body:
-      "You receive a full concept package \u2014 spatial layout, material palette, moodboard, and a line-by-line cost estimate \u2014 before any purchasing begins. You approve every direction. Full stop.",
+      "You receive a full concept package: spatial layout, material palette, moodboard, and a line-by-line cost estimate before any purchasing begins. Stakeholder walkthroughs are part of this phase — approvals happen here, not during construction.",
   },
   {
     num: "03",
-    title: "We develop with precision",
+    title: "Development — documents that build without confusion",
     body:
-      "Construction drawings, 3D walkthroughs, fixture specs, and sourcing from the region\u2019s best makers. We refine until the plan is genuinely right. Then we lock it so the build holds exactly what you approved.",
+      "Revit and ArchiCAD construction documents, 3D walkthroughs, FF&E specifications, and finish schedules. Daniela's documentation standard has reduced field change orders by 40% and cut permit review timelines across multi-site projects.",
   },
   {
     num: "04",
-    title: "We see it through to the last detail",
+    title: "Delivery — on site until it's right",
     body:
-      "We manage the build and every trade on it. The project isn\u2019t finished when the last box is cleared \u2014 it\u2019s finished when you walk through and it feels like yours. That\u2019s the bar we hold ourselves to.",
+      "We coordinate procurement lead times, sequence installations, and conduct site reviews through completion. The project closes when the space performs as designed — not when the last box leaves the floor.",
   },
 ];
 
@@ -34,13 +34,13 @@ export default function Process() {
           How We Work
         </p>
         <h2 className="font-display font-light italic leading-[1.05] mb-8 text-white" style={{ fontSize: 'clamp(36px, 5vw, 64px)' }}>
-          Transparency isn&apos;t a feature.
-          <span className="not-italic font-semibold"> It&apos;s the whole method.</span>
+          Good process is invisible.
+          <span className="not-italic font-semibold"> Bad process isn&apos;t.</span>
         </h2>
         <p className="text-[18px] leading-[2] font-light mb-16 max-w-xl" style={{ color: 'rgba(250,247,242,0.65)' }}>
-          The Northeast is full of project horror stories &mdash; budgets that doubled,
-          scopes that drifted, clients who stopped being consulted halfway through.
-          Our process is designed explicitly around those failures.
+          After a decade managing construction documents, coordinating trades, and
+          tracking FF&amp;E across complex projects, Daniela built a process designed
+          around one goal: no surprises. For you or for the build team.
         </p>
 
         <div className="grid md:grid-cols-2 gap-10 lg:gap-14">
