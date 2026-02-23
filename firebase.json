@@ -28,7 +28,7 @@
     "rewrites": [
       {
         "source": "/api/media",
-        "function": "nextServer",
+        "function": "essicommercialMedia",
         "region": "us-east1"
       }
     ]

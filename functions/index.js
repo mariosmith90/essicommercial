@@ -1,18 +1,22 @@
 "use strict";
 
 const { onRequest } = require("firebase-functions/v2/https");
+const { defineSecret } = require("firebase-functions/params");
 const { Storage } = require("@google-cloud/storage");
 
-// GCS_CLIENT_EMAIL, GCS_BUCKET_NAME, and GCS_PRIVATE_KEY are set via functions/.env
+// ESSI_GCS_PRIVATE_KEY stored in Firebase Secret Manager
+// GCS_CLIENT_EMAIL and GCS_BUCKET_NAME are set via functions/.env
+const essiGcsPrivateKey = defineSecret("ESSI_GCS_PRIVATE_KEY");
 
 const EXPIRY_MS = 15 * 60 * 1000;
 
-exports.nextServer = onRequest(
+exports.essicommercialMedia = onRequest(
   {
     region: "us-east1",
     memory: "256MiB",
     timeoutSeconds: 30,
     concurrency: 80,
+    secrets: [essiGcsPrivateKey],
   },
   async (req, res) => {
     res.set("Access-Control-Allow-Origin", "*");
@@ -40,7 +44,7 @@ exports.nextServer = onRequest(
         projectId: "organic-spirit-488116-e2",
         credentials: {
           client_email: process.env.GCS_CLIENT_EMAIL,
-          private_key: (process.env.GCS_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
+          private_key: (essiGcsPrivateKey.value() || "").replace(/\\n/g, "\n"),
         },
       });
 
