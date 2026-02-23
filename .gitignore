@@ -40,7 +40,9 @@ yarn-error.log*
 
 # env files
 .env*
-functions/.env
+# functions/.env only has non-sensitive values (client email, bucket name)
+# ESSI_GCS_PRIVATE_KEY is stored in Firebase Secret Manager
+!functions/.env
 
 # firebase
 .firebase/
