@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main  # Triggers when a PR is merged into main
+  workflow_dispatch:  # Allow manual triggers from GitHub Actions UI
 
 jobs:
   deploy:
