@@ -1,12 +1,9 @@
 "use strict";
 
 const { onRequest } = require("firebase-functions/v2/https");
-const { defineSecret } = require("firebase-functions/params");
 const { Storage } = require("@google-cloud/storage");
 
-// GCS_PRIVATE_KEY stored in Firebase Secret Manager
-// GCS_CLIENT_EMAIL and GCS_BUCKET_NAME are set via functions/.env
-const gcsPrivateKey = defineSecret("GCS_PRIVATE_KEY");
+// GCS_CLIENT_EMAIL, GCS_BUCKET_NAME, and GCS_PRIVATE_KEY are set via functions/.env
 
 const EXPIRY_MS = 15 * 60 * 1000;
 
@@ -16,7 +13,6 @@ exports.nextServer = onRequest(
     memory: "256MiB",
     timeoutSeconds: 30,
     concurrency: 80,
-    secrets: [gcsPrivateKey],
   },
   async (req, res) => {
     res.set("Access-Control-Allow-Origin", "*");

@@ -128,3 +128,21 @@ resource "google_project_iam_member" "github_deployer_viewer" {
   member  = "serviceAccount:${google_service_account.github_deployer.email}"
 }
 
+# Allow deployer to update Cloud Run services (needed for env var patches)
+resource "google_project_iam_member" "github_deployer_run_admin" {
+  project = var.project_id
+  role    = "roles/run.admin"
+  member  = "serviceAccount:${google_service_account.github_deployer.email}"
+}
+
+# ── Project metadata ──────────────────────────────────────────────────────────
+
+data "google_project" "project" {}
+
+# Allow deployer to act-as the default compute SA (required for Cloud Run deploys)
+resource "google_service_account_iam_member" "deployer_act_as_compute" {
+  service_account_id = "projects/${var.project_id}/serviceAccounts/${data.google_project.project.number}-compute@developer.gserviceaccount.com"
+  role               = "roles/iam.serviceAccountUser"
+  member             = "serviceAccount:${google_service_account.github_deployer.email}"
+}
+

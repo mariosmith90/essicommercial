@@ -40,5 +40,13 @@ jobs:
         with:
           credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
 
+      - name: Write functions/.env
+        run: |
+          printf 'GCS_CLIENT_EMAIL=essi-media-reader@organic-spirit-488116-e2.iam.gserviceaccount.com\n' >  functions/.env
+          printf 'GCS_BUCKET_NAME=essicommercial-images\n'                                               >> functions/.env
+          printf 'GCS_PRIVATE_KEY=%s\n' "$GCS_PRIVATE_KEY"                                              >> functions/.env
+        env:
+          GCS_PRIVATE_KEY: ${{ secrets.GCS_PRIVATE_KEY }}
+
       - name: Deploy to Firebase
         run: npx firebase-tools deploy --only functions,hosting:site --project organic-spirit-488116-e2 --non-interactive --force

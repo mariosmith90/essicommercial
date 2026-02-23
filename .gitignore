@@ -40,9 +40,7 @@ yarn-error.log*
 
 # env files
 .env*
-# functions/.env only has non-sensitive values (client email, bucket name)
-# GCS_PRIVATE_KEY lives in Firebase Secret Manager, not here
-!functions/.env
+functions/.env
 
 # firebase
 .firebase/
@@ -52,6 +50,11 @@ firebase-service-account.json
 gcs-service-account.json
 *.json.key
 .pnpm-debug.log*
+
+# Terraform state (local backend — never commit)
+infra/terraform.tfstate
+infra/terraform.tfstate.*.backup
+infra/.terraform/
 
 # vercel
 .vercel
